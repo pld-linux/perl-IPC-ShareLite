@@ -10,7 +10,8 @@ Summary(pl):	Modu³ Perla IPC::ShareLite - lekki interfejs do pamiêci dzielonej
 Name:		perl-IPC-ShareLite
 Version:	0.09
 Release:	3
-License:	GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	3942a55cfc5e6d3b612a46cc1a9515b9
