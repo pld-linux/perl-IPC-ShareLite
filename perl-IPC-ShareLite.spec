@@ -1,34 +1,21 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	IPC
 %define		pnam	ShareLite
-Summary:	IPC::ShareLite Perl module
-Summary(cs):	Modul IPC::ShareLite pro Perl
-Summary(da):	Perlmodul IPC::ShareLite
-Summary(de):	IPC::ShareLite Perl Modul
-Summary(es):	Módulo de Perl IPC::ShareLite
-Summary(fr):	Module Perl IPC::ShareLite
-Summary(it):	Modulo di Perl IPC::ShareLite
-Summary(ja):	IPC::ShareLite Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	IPC::ShareLite ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul IPC::ShareLite
-Summary(pl):	Modu³ Perla IPC::ShareLite
-Summary(pt):	Módulo de Perl IPC::ShareLite
-Summary(pt_BR):	Módulo Perl IPC::ShareLite
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl IPC::ShareLite
-Summary(sv):	IPC::ShareLite Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl IPC::ShareLite
-Summary(zh_CN):	IPC::ShareLite Perl Ä£¿é
+Summary:	IPC::ShareLite Perl module - light-weight interface to shared memory
+Summary(pl):	Modu³ Perla IPC::ShareLite - lekki interfejs do pamiêci dzielonej
 Name:		perl-IPC-ShareLite
 Version:	0.09
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	3942a55cfc5e6d3b612a46cc1a9515b9
-BuildRequires:	perl-devel >= 5.6
+Patch0:		%{name}-types.patch
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -46,18 +33,21 @@ wspieraæ SysV IPC (pamiêæ wspólna i semafory).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+%patch0 -p1
 
 %build
 %{__perl} Makefile.PL </dev/null \
 	INSTALLDIRS=vendor
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
