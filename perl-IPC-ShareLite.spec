@@ -22,8 +22,8 @@ Summary(sv):	IPC::ShareLite Perlmodul
 Summary(uk):	Модуль для Perl IPC::ShareLite
 Summary(zh_CN):	IPC::ShareLite Perl дё©И
 Name:		perl-IPC-ShareLite
-Version:	0.08
-Release:	7
+Version:	0.09
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
