@@ -49,7 +49,7 @@ wspieraæ SysV IPC (pamiêæ wspólna i semafory).
 
 %build
 %{__perl} Makefile.PL </dev/null \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %{!?_without_tests:%{__make} test}
