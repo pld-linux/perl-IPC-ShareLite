@@ -2,10 +2,11 @@
 Summary:	IPC-ShareLite perl module
 Summary(pl):	Modu³ perla IPC-ShareLite
 Name:		perl-IPC-ShareLite
-Version:	0.06
+Version:	0.08
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
+Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/IPC/IPC-ShareLite-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-18
@@ -36,7 +37,7 @@ strip --strip-unneeded $RPM_BUILD_ROOT/%{perl_sitearch}/auto/IPC/ShareLite/*.so
 (
   cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/IPC/ShareLite
   sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
-  mv .packlist.new .packlist
+  mv -f .packlist.new .packlist
 )
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \
