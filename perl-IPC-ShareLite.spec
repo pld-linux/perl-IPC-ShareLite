@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	IPC
 %define	pnam	ShareLite
-%include	/usr/lib/rpm/macros.perl
 Summary:	IPC-ShareLite perl module
 Summary(pl):	Modu³ perla IPC-ShareLite
 Name:		perl-IPC-ShareLite
 Version:	0.08
-Release:	4
-
+Release:	5
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -21,7 +20,7 @@ IPC-ShareLite perl module.
 Modu³ perla IPC-ShareLite.
 
 %prep
-%setup -q -n IPC-ShareLite-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 yes "" | perl Makefile.PL
