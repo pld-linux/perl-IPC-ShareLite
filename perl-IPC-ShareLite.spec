@@ -23,12 +23,12 @@ Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl IPC::ShareLite
 Summary(zh_CN):	IPC::ShareLite Perl Ä£¿é
 Name:		perl-IPC-ShareLite
 Version:	0.09
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-18
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -47,7 +47,8 @@ wspieraæ SysV IPC (pamiêæ wspólna i semafory).
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL </dev/null
+%{__perl} Makefile.PL </dev/null \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %{!?_without_tests:%{__make} test}
@@ -63,9 +64,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README TODO
-%{perl_sitearch}/IPC/ShareLite.pm
-%dir %{perl_sitearch}/auto/IPC/ShareLite
-%{perl_sitearch}/auto/IPC/ShareLite/autosplit.ix
-%{perl_sitearch}/auto/IPC/ShareLite/ShareLite.bs
-%attr(755,root,root) %{perl_sitearch}/auto/IPC/ShareLite/ShareLite.so
+%{perl_vendorarch}/IPC/ShareLite.pm
+%dir %{perl_vendorarch}/auto/IPC/ShareLite
+%{perl_vendorarch}/auto/IPC/ShareLite/autosplit.ix
+%{perl_vendorarch}/auto/IPC/ShareLite/ShareLite.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/IPC/ShareLite/ShareLite.so
 %{_mandir}/man3/*
