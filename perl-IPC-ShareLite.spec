@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	IPC
-%define	pnam	ShareLite
+%define		pdir	IPC
+%define		pnam	ShareLite
 Summary:	IPC::ShareLite Perl module - light-weight interface to shared memory
 Summary(pl):	Modu³ Perla IPC::ShareLite - lekki interfejs do pamiêci dzielonej
 Name:		perl-IPC-ShareLite
