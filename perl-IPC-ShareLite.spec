@@ -28,7 +28,7 @@ to use this module.
 
 %description -l pl
 IPC::ShareLite udostêpnia prosty interfejs do pamiêci wspólnej,
-umo¿liwaiaj±c wydajn± wymianê danych pomiêdzy procesami. Aby
+umo¿liwiaj±c wydajn± wymianê danych pomiêdzy procesami. Aby
 korzystanie z tego modu³u by³o mo¿liwe, System operacyjny musi
 wspieraæ SysV IPC (pamiêæ wspólna i semafory).
 
