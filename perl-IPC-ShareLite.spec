@@ -3,7 +3,7 @@ Summary:	IPC-ShareLite perl module
 Summary(pl):	Modu³ perla IPC-ShareLite
 Name:		perl-IPC-ShareLite
 Version:	0.08
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
