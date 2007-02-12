@@ -6,7 +6,7 @@
 %define		pdir	IPC
 %define		pnam	ShareLite
 Summary:	IPC::ShareLite Perl module - light-weight interface to shared memory
-Summary(pl):	Modu³ Perla IPC::ShareLite - lekki interfejs do pamiêci dzielonej
+Summary(pl.UTF-8):   ModuÅ‚ Perla IPC::ShareLite - lekki interfejs do pamiÄ™ci dzielonej
 Name:		perl-IPC-ShareLite
 Version:	0.09
 Release:	4
@@ -26,11 +26,11 @@ data to be efficiently communicated between processes. Your operating
 system must support SysV IPC (shared memory and semaphores) in order
 to use this module.
 
-%description -l pl
-IPC::ShareLite udostêpnia prosty interfejs do pamiêci wspólnej,
-umo¿liwiaj±c wydajn± wymianê danych pomiêdzy procesami. Aby
-korzystanie z tego modu³u by³o mo¿liwe, System operacyjny musi
-wspieraæ SysV IPC (pamiêæ wspólna i semafory).
+%description -l pl.UTF-8
+IPC::ShareLite udostÄ™pnia prosty interfejs do pamiÄ™ci wspÃ³lnej,
+umoÅ¼liwiajÄ…c wydajnÄ… wymianÄ™ danych pomiÄ™dzy procesami. Aby
+korzystanie z tego moduÅ‚u byÅ‚o moÅ¼liwe, System operacyjny musi
+wspieraÄ‡ SysV IPC (pamiÄ™Ä‡ wspÃ³lna i semafory).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
