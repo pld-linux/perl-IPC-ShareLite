@@ -6,7 +6,7 @@
 %define		pdir	IPC
 %define		pnam	ShareLite
 Summary:	IPC::ShareLite Perl module - light-weight interface to shared memory
-Summary(pl.UTF-8):   Moduł Perla IPC::ShareLite - lekki interfejs do pamięci dzielonej
+Summary(pl.UTF-8):	Moduł Perla IPC::ShareLite - lekki interfejs do pamięci dzielonej
 Name:		perl-IPC-ShareLite
 Version:	0.09
 Release:	4
