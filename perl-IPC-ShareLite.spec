@@ -9,7 +9,7 @@ Summary:	IPC::ShareLite Perl module - light-weight interface to shared memory
 Summary(pl.UTF-8):	Moduł Perla IPC::ShareLite - lekki interfejs do pamięci dzielonej
 Name:		perl-IPC-ShareLite
 Version:	0.09
-Release:	5
+Release:	6
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
