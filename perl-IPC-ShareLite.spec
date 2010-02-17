@@ -8,14 +8,13 @@
 Summary:	IPC::ShareLite Perl module - light-weight interface to shared memory
 Summary(pl.UTF-8):	Moduł Perla IPC::ShareLite - lekki interfejs do pamięci dzielonej
 Name:		perl-IPC-ShareLite
-Version:	0.09
-Release:	7
+Version:	0.17
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/IPC/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	3942a55cfc5e6d3b612a46cc1a9515b9
-Patch0:		%{name}-types.patch
+# Source0-md5:	54c7aa08dc065b6c946c48491d33450d
 URL:		http://search.cpan.org/dist/IPC-ShareLite/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -35,7 +34,6 @@ wspierać SysV IPC (pamięć wspólna i semafory).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch0 -p1
 
 %build
 %{__perl} Makefile.PL </dev/null \
@@ -57,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README TODO
+%doc Changes README
 %{perl_vendorarch}/IPC/ShareLite.pm
 %dir %{perl_vendorarch}/auto/IPC/ShareLite
 %{perl_vendorarch}/auto/IPC/ShareLite/autosplit.ix
