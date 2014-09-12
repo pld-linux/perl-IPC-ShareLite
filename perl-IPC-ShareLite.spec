@@ -59,6 +59,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/IPC/ShareLite.pm
 %dir %{perl_vendorarch}/auto/IPC/ShareLite
 %{perl_vendorarch}/auto/IPC/ShareLite/autosplit.ix
-%{perl_vendorarch}/auto/IPC/ShareLite/ShareLite.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/IPC/ShareLite/ShareLite.so
 %{_mandir}/man3/*
