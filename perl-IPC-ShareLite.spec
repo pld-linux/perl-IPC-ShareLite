@@ -14,9 +14,10 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/IPC/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	54c7aa08dc065b6c946c48491d33450d
-URL:		http://search.cpan.org/dist/IPC-ShareLite/
+URL:		https://metacpan.org/dist/IPC-ShareLite
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -59,4 +60,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/IPC/ShareLite
 %{perl_vendorarch}/auto/IPC/ShareLite/autosplit.ix
 %attr(755,root,root) %{perl_vendorarch}/auto/IPC/ShareLite/ShareLite.so
-%{_mandir}/man3/*
+%{_mandir}/man3/IPC::ShareLite.3pm*
